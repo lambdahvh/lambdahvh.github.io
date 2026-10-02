@@ -685,3 +685,40 @@ a.req-item:hover {
   color: var(--sand);
   white-space: nowrap;
 }
+
+.hero-reqs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  margin: 16px 0 20px;
+}
+
+.hero-req {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border: 1px solid var(--line2);
+  border-radius: 999px;
+  font-size: 12px;
+  color: var(--soft);
+  background: var(--up);
+  white-space: nowrap;
+  transition: border-color .14s, color .14s;
+}
+
+a.hero-req:hover {
+  border-color: var(--sand);
+  color: var(--sand);
+}
+
+.hero-req-static {
+  cursor: default;
+}
+
+.hero-req code {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--sand);
+}
