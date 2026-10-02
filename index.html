@@ -32,7 +32,7 @@
   <nav class="nav-links">
     <a href="#media">Media</a>
     <a href="#lua">Lua API</a>
-    <a href="#compile">Compile</a>
+    <a href="#compile">Requirements</a>
     <a href="https://github.com/bestluaucoder/Lambda" target="_blank" rel="noopener">GitHub</a>
     <a class="nav-dc" href="https://discord.gg/lmbda" target="_blank" rel="noopener">Discord</a>
   </nav>
@@ -321,10 +321,36 @@ end)</code></pre>
 
 <section class="sect sect-split" id="compile">
   <div class="sect-head">
-    <h2>Compile it yourself</h2>
-    <p>The release binary is built from this exact source. Nothing is added or removed.</p>
+    <h2>Requirements</h2>
+    <p>You need all three before Lambda will load. Missing any one of them is the most common reason for crashes or injection failures.</p>
+    <div class="req-list">
+      <a class="req-item" href="https://www.microsoft.com/en-us/download/details.aspx?id=35" target="_blank" rel="noopener">
+        <span class="req-num">1</span>
+        <span class="req-body">
+          <b>DirectX End-User Runtime (June 2010)</b>
+          <span>Installs d3dx9_43.dll which Lambda's renderer depends on. Without it the DLL crashes on load.</span>
+        </span>
+        <span class="req-dl">Download &rarr;</span>
+      </a>
+      <a class="req-item" href="https://aka.ms/vs/17/release/vc_redist.x86.exe" target="_blank" rel="noopener">
+        <span class="req-num">2</span>
+        <span class="req-body">
+          <b>Visual C++ Redistributable 2022 (x86)</b>
+          <span>The 32-bit VC++ runtime. Required even on 64-bit Windows — make sure you grab the x86 version.</span>
+        </span>
+        <span class="req-dl">Download &rarr;</span>
+      </a>
+      <div class="req-item req-item-static">
+        <span class="req-num">3</span>
+        <span class="req-body">
+          <b>CS:GO launch option: <code>-insecure</code></b>
+          <span>Right-click CS:GO in Steam &rarr; Properties &rarr; Launch Options &rarr; type <code>-insecure</code>. Without this the game blocks DLL injection entirely.</span>
+        </span>
+      </div>
+    </div>
   </div>
   <div class="stack">
+    <div class="sect-head" style="margin-bottom:8px"><h2>Compile it yourself</h2><p>The release binary is built from this exact source.</p></div>
     <pre class="code"><code>git clone https://github.com/bestluaucoder/Lambda
 cd Lambda\Lambda-master
 
@@ -340,7 +366,6 @@ cd Lambda\Lambda-master
     </div>
   </div>
 </section>
-
 <footer class="foot">
   <div class="foot-brand"><span class="brand-glyph">&#955;</span> Lambda</div>
   <div class="foot-links">
